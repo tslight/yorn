@@ -1,11 +1,27 @@
-import argparse
+import readline
+from argparse import ArgumentParser
+from re import match
 
-from yorn.ask import ask
+
+def ask(question):
+    '''
+    Infinite loop to get yes or no answer or quit the script.
+    '''
+    while True:
+        ans = input(question)
+        ans = ans.lower()
+        if match('^y(es)?$', ans):
+            return True
+        elif match('^n(o)?$', ans):
+            return False
+        elif match('^q(uit)?$', ans):
+            quit()
+        else:
+            print("%s is invalid. Enter (y)es, (n)o or (q)uit." % ans)
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description='Answer yes or no to a given question.')
+    parser = ArgumentParser(description='Answer yes or no to a question.')
     parser.add_argument("question", type=str, help="A question to ask.")
     args = parser.parse_args()
 
@@ -16,6 +32,5 @@ def main():
         print("You answered no.")
 
 
-# this means that if this script is executed, then main() will be executed
 if __name__ == '__main__':
     main()
