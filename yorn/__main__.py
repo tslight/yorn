@@ -25,7 +25,7 @@ def main():
     parser.add_argument("question", type=str, help="A question to ask.")
     args = parser.parse_args()
 
-    question = str(args.question)
+    question = args.question
     if ask(question):
         print("You answered yes.")
     else:
