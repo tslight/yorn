@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="yorn",
-    version="0.0.3",
+    version="0.0.4",
     author="Toby Slight",
     author_email="tobyslight@gmail.com",
     description="A boringly simple CLI input function.",
