@@ -26,14 +26,17 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
+![img](./yorn.png "Yorn")
+
 ## PYTHON USAGE
 
 ```python
 from yorn import ask
 
 question = "Would you like run my amazing program? "
+
 if ask(question):
 	run_my_amazing_function()
 else
-	print("Cookie monster is sad.")
+	print("Cookie monster is sad :-(")
 ```

@@ -7,11 +7,12 @@ def main():
     parser.add_argument("question", type=str, help="A question to ask.")
     args = parser.parse_args()
 
-    question = args.question
+    question = "\n" + args.question
+
     if ask(question):
-        print("You answered yes.")
+        print("\nYou answered yes.\n")
     else:
-        print("You answered no.")
+        print("\nYou answered no.\n")
 
 
 if __name__ == '__main__':
