@@ -1,3 +1,6 @@
+# Copyright (c) 2018, Toby Slight. All rights reserved.
+# ISC License (ISCL) - see LICENSE file for details.
+
 import readline
 from sys import stdout
 from re import match
