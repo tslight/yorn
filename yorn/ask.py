@@ -15,7 +15,7 @@ def ask(question):
     Infinite loop to get yes or no answer or quit the script.
     '''
     while True:
-        ans = input("\n" + question)
+        ans = input(question)
         al = ans.lower()
         if match('^y(es)?$', al):
             return True
